@@ -1,0 +1,45 @@
+
+
+.lista-juegos--grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.juego-individual{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all ease-out 0.5s;
+  transform: translateX(100%);
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+//tablet
+
+@media screen and (min-width: 40em) and (max-width: 63.9em) {
+  .lista-juegos--grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+//web
+
+@media screen and (min-width: 64em) {
+  .lista-juegos--grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+
+}
+

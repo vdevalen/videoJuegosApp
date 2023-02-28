@@ -1,0 +1,37 @@
+<!-- <p>
+  la cantidad {{ listaDeJuegosAgg.length }}
+</p> -->
+<!-- <p>
+  total: ${{total}}
+</p> -->
+<!-- <p>
+  Today: {{today | date}}
+</p> -->
+<!-- <button (click)="toggleJuegoIndividual()">abrir</button> -->
+<div class="container">
+  <div class="lista-juegos--grid" >
+    <app-juegos
+    [juegos]="juegos"
+    *ngFor="let juegos of juegosArray"
+    (agregarJuego)="juegosAgregados($event)"
+    (verJuego)="onVerDetalle($event)">
+  </app-juegos>
+  </div>
+  <div class="juego-individual" [class.active]="showJuegoIndividual">
+    <div *ngIf="juegoElegido">
+      <button (click)="toggleJuegoIndividual()">Cerrar</button>
+      <h1>{{juegoElegido.id}}</h1>
+      <p>{{juegoElegido.title}}</p>
+      <p>{{juegoElegido.short_description}}</p>
+      <p>{{juegoElegido.game_url}}</p>
+      <p>{{juegoElegido.genre}}</p>
+      <p>{{juegoElegido.platform}}</p>
+      <p>{{juegoElegido.publisher}}</p>
+      <p>{{juegoElegido.developer}}</p>
+      <p>{{juegoElegido.release_date}}</p>
+      <p>{{juegoElegido.freetogame_profile_url}}</p>
+      <button>agg fav</button>
+    </div>
+  </div>
+</div>
+
