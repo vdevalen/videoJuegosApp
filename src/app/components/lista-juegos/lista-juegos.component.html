@@ -18,7 +18,28 @@
   </app-juegos>
   </div>
   <div class="juego-individual" [class.active]="showJuegoIndividual">
-    <div *ngIf="juegoElegido">
+    <div class="card text-center" *ngIf="juegoElegido">
+      <div class="card-header">
+        Información del juego
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Titúlo: {{juegoElegido.title}}</h5>
+
+        <p class="card-text">Descripción: {{juegoElegido.short_description}}</p>
+        <img [src]="juegoElegido.thumbnail" alt="">
+        <p class="card-text">{{juegoElegido.id}}</p>
+        <p class="card-text">{{juegoElegido.game_url}}</p>
+        <p class="card-text">{{juegoElegido.genre}}</p>
+        <p class="card-text">{{juegoElegido.platform}}</p>
+        <p class="card-text">{{juegoElegido.publisher}}</p>
+        <p class="card-text">{{juegoElegido.developer}}</p>
+        <p class="card-text">{{juegoElegido.release_date}}</p>
+        <p class="card-text">{{juegoElegido.freetogame_profile_url}}</p>
+        <button class="btn btn-dark" (click)="toggleJuegoIndividual()">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- <div *ngIf="juegoElegido">
       <button (click)="toggleJuegoIndividual()">Cerrar</button>
       <h1>{{juegoElegido.id}}</h1>
       <p>{{juegoElegido.title}}</p>
@@ -31,7 +52,7 @@
       <p>{{juegoElegido.release_date}}</p>
       <p>{{juegoElegido.freetogame_profile_url}}</p>
       <button>agg fav</button>
-    </div>
+    </div> -->
   </div>
 </div>
 

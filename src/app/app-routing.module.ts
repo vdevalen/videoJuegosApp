@@ -7,6 +7,11 @@ import { JuegosFavoritosComponent } from './pages/juegos-favoritos/juegos-favori
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
     component: HomeComponent
   },
