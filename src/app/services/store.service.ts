@@ -14,19 +14,16 @@ export class StoreService {
   constructor() { }
 
   aggJuegoFav(juegos: Juegos){
-    this.listaDeJuegosAgg.push(juegos);
-    this.misFavoritos.next(this.listaDeJuegosAgg);
+    console.log(juegos);
+    console.log(this.listaDeJuegosAgg);
+    console.log('listaaa',juegos)
+    if (this.listaDeJuegosAgg.filter((lista)=> lista.id === juegos.id)) {
+      this.listaDeJuegosAgg.push(juegos);
+      this.misFavoritos.next(this.listaDeJuegosAgg);
+    }
   }
 
   getListaDeJuegos(){
     return this.listaDeJuegosAgg;
   }
-
-
-
-
-
-  // getTotal(){
-  //   return this.listaDeJuegosAgg.reduce((sum, item) => sum + item.id, 0);
-  // }
 }

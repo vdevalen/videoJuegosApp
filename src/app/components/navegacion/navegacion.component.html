@@ -26,113 +26,34 @@
             <li><a class="dropdown-item" href="#">Comunidad</a></li>
           </ul>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li> -->
       </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-        <!-- <div class="cart">
-          <a href="">
-            <button class="btn btn-outline-success" type="submit">Favoritos</button>
-          </a>
-          <span class="counter">{{counter}}</span>
-        </div> -->
-
-        <!-- Button trigger modal -->
-        <div clas="cart">
-          <a href="">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Favoritos <span class="counter">{{counter}}</span> </button>
-          </a>
-
-        </div>
-
+<!-- Button trigger modal -->
+      <div class="cart">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Favoritos <span class="counter">{{counter}}</span>
+        </button>
+      </div>
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Lista de juegos favoritos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      <div *ngFor="let juegos of listaCompletaFav" class="modal-body" >
+      <h1>{{juegos.title}}</h1>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <!-- <button type="button" class="btn btn-primary">Understood</button> -->
       </div>
     </div>
   </div>
 </div>
-
-        <!-- <div class="cart">
-        <a href="">
-          <img src="./assets/svg/icon_shopping_cart.svg" alt="logo">
-        </a>
-        <span class="counter">{{counter}}</span>
-      </div> -->
-      <!-- </form> -->
     </div>
   </div>
 </nav>
 
-<!-- <nav class="navegacion-completa">
-<div class="show-mobile">
-  <div>
-    <button (click)="toggleMenu()">
-      <img src="./assets/svg/icon_menu.svg" alt="menu">
-    </button>
-    <a href="">
-      <img src="./assets/imagenes/freetogame-logo.png" alt="logo">
-    </a>
-    <div class="cart">
-      <a href="">
-        <img src="./assets/svg/icon_shopping_cart.svg" alt="logo">
-      </a>
-      <span class="counter">{{ counter }}</span>
-    </div>
 
-  </div>
-  <div class="side-menu" [class.active]="activeMenu">
-    <button (click)="toggleMenu()">Close</button>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a href="" class="nav-link">All</a>
-      </li>
-      <li class="nav-item">
-        <a href="" class="nav-link">Clothes</a>
-      </li>
-      <li class="nav-item">
-      <a href=""class="nav-link">Electronics</a>
-    </li>
-    </ul>
-  </div>
-</div>
-<div class="hide-mobile">
-  <div>
-    <nav>
-      <a class="logo" href="">
-        <img src="./assets/imagenes/freetogame-logo.png" alt="logo">
-      </a>
-      <ul>
-        <li><a href="">All</a></li>
-        <li><a href="">Clothes</a></li>
-        <li><a href="">Electronics</a></li>
-      </ul>
-    </nav>
-    <div class="info">
-      <div class="account">valenp@valenp.com</div>
-      <div class="cart">
-        <a href="">
-          <img src="./assets/svg/icon_shopping_cart.svg" alt="logo">
-        </a>
-        <span class="counter">{{counter}}</span>
-      </div>
-    </div>
-  </div>
-</div>
-</nav>
- -->
