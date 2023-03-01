@@ -22,18 +22,19 @@
       <div class="card-header">
         Información del juego
       </div>
+      <div class="verDetalle">
       <div class="card-body">
-        <h5 class="card-title">Titúlo: {{juegoElegido.title}}</h5>
-        <p class="card-text">Descripción: {{juegoElegido.short_description}}</p>
+        <h5 class="card-title"><span class="tituloDetalle">Titúlo:</span>{{juegoElegido.title}}</h5>
         <img [src]="juegoElegido.thumbnail" alt="">
-        <!-- <p class="card-text">{{juegoElegido.id}}</p> -->
-        <p class="card-text">{{juegoElegido.game_url}} y {{juegoElegido.genre}}</p>
+        <p class="card-text"><span class="tituloDetalle">Descripción:</span>{{juegoElegido.short_description}}</p>
+        <p class="card-text"><span class="tituloDetalle">Url y genero:</span>{{juegoElegido.game_url}} - {{juegoElegido.genre}}</p>
         <p class="card-text">{{juegoElegido.platform}}</p>
         <p class="card-text">{{juegoElegido.developer}}</p>
         <p class="card-text">{{juegoElegido.release_date}}</p>
         <p class="card-text">{{juegoElegido.freetogame_profile_url}}</p>
-        <button class="btn btn-dark" (click)="toggleJuegoIndividual()">Cerrar</button>
+        <button class="btn btn-dark btn-sm" (click)="toggleJuegoIndividual()">Cerrar</button>
       </div>
+    </div>
     </div>
 
     <!-- <div *ngIf="juegoElegido">

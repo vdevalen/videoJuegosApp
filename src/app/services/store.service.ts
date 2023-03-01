@@ -22,8 +22,11 @@ export class StoreService {
       this.misFavoritos.next(this.listaDeJuegosAgg);
     }
   }
-
   getListaDeJuegos(){
     return this.listaDeJuegosAgg;
+  }
+
+  getEliminarFavorito(id: number){
+    this.listaDeJuegosAgg.splice(id, 1);
   }
 }

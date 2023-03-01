@@ -1,12 +1,15 @@
 <div class="card">
-  <div class="card-body" style="height: 22em;">
+  <div class="card-body">
     <h5 class="card-title">{{juegos.title}}</h5>
     <app-img [img]="juegos.thumbnail" class="card-img-top" alt="..."></app-img>
     <p class="card-text">{{juegos.short_description}}</p>
     <div class="div-botones--card">
-      <button (click)="agregarFavoritos()" href="#" class="btn btn-primary">Agregar</button>
-      <button (click)="onVerDetalle()" class="btn btn-primary">Ver detalle</button>
-
+      <div>
+        <button (click)="agregarFavoritos()" href="#" class="btn btn-dark btn-sm">Favorito <img src="/assets/svg/icon-heart.svg" alt=""></button>
+      </div>
+      <div>
+        <button (click)="onVerDetalle()" href="#" class="btn btn-dark btn-sm" >Ver detalle <img src="/assets/svg/icon-heart.svg" alt=""></button>
+      </div>
     </div>
   </div>
 </div>

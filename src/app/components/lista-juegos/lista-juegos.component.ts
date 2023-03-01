@@ -50,8 +50,7 @@ export class ListaJuegosComponent implements OnInit {
   juegosAgregados(juegos: Juegos){
       console.log(juegos);
       this.storeService.aggJuegoFav(juegos);
-      // this.total = this.storeService.getTotal();//se calcula el total de los juegos
-    }
+  }
 
   toggleJuegoIndividual(){
       this.showJuegoIndividual = !this.showJuegoIndividual;

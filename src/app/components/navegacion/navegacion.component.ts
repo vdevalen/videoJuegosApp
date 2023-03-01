@@ -1,6 +1,8 @@
+import { Juegos } from './../../models/juegos.model';
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from "../../services/store.service";
-import { Juegos } from '../../models/juegos.model';
+import { JuegosService } from "../../services/juegos.service";
+
 
 @Component({
   selector: 'app-navegacion',
@@ -14,7 +16,8 @@ export class NavegacionComponent implements OnInit {
   listaCompletaFav: Juegos [] = [];
 
   constructor(
-    private storeService: StoreService
+    private storeService: StoreService,
+    private juegosService: JuegosService
   ) { }
 
   ngOnInit(): void {
@@ -32,5 +35,9 @@ export class NavegacionComponent implements OnInit {
     this.listaCompletaFav =
     this.storeService.getListaDeJuegos();
     console.log(this.listaCompletaFav);
+  }
+
+  eliminarJuegoFav(id : number){
+    this.storeService.getEliminarFavorito(id);
   }
 }
