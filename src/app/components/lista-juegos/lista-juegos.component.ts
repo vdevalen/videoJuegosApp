@@ -12,7 +12,6 @@ import { JuegosService } from '../../services/juegos.service';
 export class ListaJuegosComponent implements OnInit {
 
   listaDeJuegosAgg: Juegos [] = []; //se pone vacio para que cada que llegue un juego nuevo aparezca en este array
-  // total = 0;
   juegosArray: Juegos[] = [];
   today = new Date();
   showJuegoIndividual = false;
@@ -35,7 +34,7 @@ export class ListaJuegosComponent implements OnInit {
 
   constructor( //inyeccion de dependencias
     private storeService: StoreService,
-    private juegosService: JuegosService
+    private juegosService: JuegosService,
   ) {
     this.listaDeJuegosAgg = this.storeService.getListaDeJuegos();
   }
@@ -48,24 +47,21 @@ export class ListaJuegosComponent implements OnInit {
   }
 
   juegosAgregados(juegos: Juegos){
-      console.log(juegos);
-      this.storeService.aggJuegoFav(juegos);
+      this.storeService.agregarStorage(juegos);
   }
 
   toggleJuegoIndividual(){
       this.showJuegoIndividual = !this.showJuegoIndividual;
     }
 
-    onVerDetalle(id: number){
-      console.log('id')
+  onVerDetalle(id: number){
       this.juegosService.getJuego(id)
       .subscribe(data => {
-        console.log('holiii', data);
         this.toggleJuegoIndividual();
         this.juegoElegido = data;
       })
     }
-  }
+}
 
 
 

@@ -22,9 +22,11 @@ export class NavegacionComponent implements OnInit {
 
   ngOnInit(): void {
     this.getFav();
-    this.storeService.misFavoritos$.subscribe(Juegos =>{
-      this.counter =  Juegos.length;
+    this.storeService.misFavoritos$.subscribe(_ =>{
+      const items = JSON.parse(this.storeService.contadorFavoritos());
+      this.counter = items.length;
       })
+      this.storeService.mostrarInformacion();
     };
 
   toggleMenu() {
@@ -34,10 +36,9 @@ export class NavegacionComponent implements OnInit {
   getFav(){
     this.listaCompletaFav =
     this.storeService.getListaDeJuegos();
-    console.log(this.listaCompletaFav);
   }
 
-  eliminarJuegoFav(id : number){
-    this.storeService.getEliminarFavorito(id);
+  eliminarJuegoFav(index: number, juegos: Juegos){
+    this.storeService.eliminarLocalStorage(index, juegos);
   }
 }
