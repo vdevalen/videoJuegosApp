@@ -18,19 +18,23 @@
   </app-juegos>
   </div>
   <div class="juego-individual" [class.active]="showJuegoIndividual">
-    <div *ngIf="juegoElegido">
-      <button (click)="toggleJuegoIndividual()">Cerrar</button>
-      <h1>{{juegoElegido.id}}</h1>
-      <p>{{juegoElegido.title}}</p>
-      <p>{{juegoElegido.short_description}}</p>
-      <p>{{juegoElegido.game_url}}</p>
-      <p>{{juegoElegido.genre}}</p>
-      <p>{{juegoElegido.platform}}</p>
-      <p>{{juegoElegido.publisher}}</p>
-      <p>{{juegoElegido.developer}}</p>
-      <p>{{juegoElegido.release_date}}</p>
-      <p>{{juegoElegido.freetogame_profile_url}}</p>
-      <button>agg fav</button>
+    <div class="card text-center" *ngIf="juegoElegido">
+      <div class="card-header">
+        Información del juego
+      </div>
+      <div class="verDetalle">
+      <div class="card-body">
+        <h5 class="card-title"><span class="tituloDetalle">Titúlo:</span>{{juegoElegido.title}}</h5>
+        <img [src]="juegoElegido.thumbnail" alt="">
+        <p class="card-text"><span class="tituloDetalle">Descripción:</span>{{juegoElegido.short_description}}</p>
+        <p class="card-text"><span class="tituloDetalle">Url y genero:</span>{{juegoElegido.game_url}} - {{juegoElegido.genre}}</p>
+        <p class="card-text">{{juegoElegido.platform}}</p>
+        <p class="card-text">{{juegoElegido.developer}}</p>
+        <p class="card-text">{{juegoElegido.release_date}}</p>
+        <p class="card-text">{{juegoElegido.freetogame_profile_url}}</p>
+        <button class="btn btn-dark btn-sm" (click)="toggleJuegoIndividual()">Cerrar</button>
+      </div>
+    </div>
     </div>
   </div>
 </div>

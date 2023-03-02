@@ -10,3 +10,4 @@ export class AppComponent {
   title = 'video-juegos-app';
   juegosArray: Juegos[] = [];
 }
+

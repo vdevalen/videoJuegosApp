@@ -1,3 +1,15 @@
 // p, h2{
 //   margin: 0;
 // }
+.div-botones--card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 22em;
+}
+

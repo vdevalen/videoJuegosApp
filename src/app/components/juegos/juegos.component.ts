@@ -34,4 +34,8 @@ export class JuegosComponent {
   onVerDetalle(){
     this.verJuego.emit(this.juegos.id);
   }
+
+  // getIcon(){
+  //   return this.agregarJuego ? '/assets/svg/heart-solid.svg' : '/assets/svg/heart.svg'
+  // }
 }

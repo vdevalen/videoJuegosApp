@@ -2,23 +2,69 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
   <div class="container-fluid">
     <a href="#" class="navbar-brand">
-      <img src="./assets/imagenes/freetogame-logo.png" alt="logo">
+      <img src="./assets/imagenes/recurso-logo.png" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Información del juego</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Noticias</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Descubre
-          </a>
+    <!-- Button trigger modal -->
+    <div class="cart">
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <span class="counter"> Favoritos {{counter}} <img src="/assets/svg/icon-heart-solid.svg" alt="" ></span>
+      </button>
+    </div>
+<!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Lista de juegos favoritos</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    <!--tabla-->
+<div class="card">
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Titúlo</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let juegos of listaCompletaFav; let i= index">
+          <td>{{juegos.id}}</td>
+          <td>{{juegos.title}}</td>
+          <td>{{juegos.release_date}}</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-sm" (click)="eliminarJuegoFav(i, juegos)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="modal-footer">
+      <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+      <button type="button" class="btn btn-dark">Favoritos</button>
+    </div>
+  </div>
+</div>
+</div>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Información del juego</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Noticias</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Descubre
+      </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Campeones</a></li>
             <li><a class="dropdown-item" href="#">Juegos gratis</a></li>
@@ -26,84 +72,13 @@
             <li><a class="dropdown-item" href="#">Comunidad</a></li>
           </ul>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li> -->
       </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-        <div class="cart">
-          <a href="">
-            <button class="btn btn-outline-success" type="submit">Favoritos</button>
-          </a>
-          <span class="counter">{{counter}}</span>
-        </div>
-
-        <!-- <div class="cart">
-        <a href="">
-          <img src="./assets/svg/icon_shopping_cart.svg" alt="logo">
-        </a>
-        <span class="counter">{{counter}}</span>
-      </div> -->
-      <!-- </form> -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar juego" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Buscar</button>
+      </form>
     </div>
   </div>
 </nav>
 
-<!-- <nav class="navegacion-completa">
-<div class="show-mobile">
-  <div>
-    <button (click)="toggleMenu()">
-      <img src="./assets/svg/icon_menu.svg" alt="menu">
-    </button>
-    <a href="">
-      <img src="./assets/imagenes/freetogame-logo.png" alt="logo">
-    </a>
-    <div class="cart">
-      <a href="">
-        <img src="./assets/svg/icon_shopping_cart.svg" alt="logo">
-      </a>
-      <span class="counter">{{ counter }}</span>
-    </div>
 
-  </div>
-  <div class="side-menu" [class.active]="activeMenu">
-    <button (click)="toggleMenu()">Close</button>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a href="" class="nav-link">All</a>
-      </li>
-      <li class="nav-item">
-        <a href="" class="nav-link">Clothes</a>
-      </li>
-      <li class="nav-item">
-      <a href=""class="nav-link">Electronics</a>
-    </li>
-    </ul>
-  </div>
-</div>
-<div class="hide-mobile">
-  <div>
-    <nav>
-      <a class="logo" href="">
-        <img src="./assets/imagenes/freetogame-logo.png" alt="logo">
-      </a>
-      <ul>
-        <li><a href="">All</a></li>
-        <li><a href="">Clothes</a></li>
-        <li><a href="">Electronics</a></li>
-      </ul>
-    </nav>
-    <div class="info">
-      <div class="account">valenp@valenp.com</div>
-      <div class="cart">
-        <a href="">
-          <img src="./assets/svg/icon_shopping_cart.svg" alt="logo">
-        </a>
-        <span class="counter">{{counter}}</span>
-      </div>
-    </div>
-  </div>
-</div>
-</nav>
- -->

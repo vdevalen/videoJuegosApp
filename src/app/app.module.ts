@@ -11,13 +11,14 @@ import { ImgComponent } from './components/img/img.component';
 import { JuegosComponent } from './components/juegos/juegos.component';
 import { ListaJuegosComponent } from './components/lista-juegos/lista-juegos.component';
 import { NavegacionComponent } from './components/navegacion/navegacion.component';
-import { HighlightDirective } from './directives/highlight.directive';
 import { FooterComponent } from './components/footer/footer.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
-import { JuegosFavoritosComponent } from './pages/juegos-favoritos/juegos-favoritos.component';
 
+// import {  } from "./services/juegos.service";
+// import {  } from "./services/store.service";
+// import {  } from "module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +26,10 @@ import { JuegosFavoritosComponent } from './pages/juegos-favoritos/juegos-favori
     JuegosComponent,
     ListaJuegosComponent,
     NavegacionComponent,
-    HighlightDirective,
     FooterComponent,
     BannerComponent,
     NotFoundComponent,
     HomeComponent,
-    JuegosFavoritosComponent
   ],
   imports: [
     BrowserModule,
