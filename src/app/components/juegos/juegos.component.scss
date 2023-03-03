@@ -10,12 +10,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 25em;
 }
 
-.btn-card{
-  border-radius: 1.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+.card-button{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column
 }
 
+.card-text{
+  height: 7em;
+}
+
+.card-text p{
+  text-align: justify;
+}
