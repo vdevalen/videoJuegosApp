@@ -11,7 +11,7 @@ import { JuegosService } from '../../services/juegos.service';
 })
 export class ListaJuegosComponent implements OnInit {
 
-  listaDeJuegosAgg: Juegos [] = []; //se pone vacio para que cada que llegue un juego nuevo aparezca en este array
+  listaDeJuegosAgg: Juegos [] = []; 
   juegosArray: Juegos[] = [];
   today = new Date();
   showJuegoIndividual = false;
@@ -32,7 +32,7 @@ export class ListaJuegosComponent implements OnInit {
   }
 
 
-  constructor( //inyeccion de dependencias
+  constructor(
     private storeService: StoreService,
     private juegosService: JuegosService,
   ) {
@@ -40,7 +40,7 @@ export class ListaJuegosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.juegosService.getTodosJuegos() //observables
+    this.juegosService.getTodosJuegos()
     .subscribe(data => {
       this.juegosArray = data;
     });

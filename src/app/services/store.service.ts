@@ -13,7 +13,7 @@ export class StoreService {
 
   readonly favoritos= "favoritos"
   constructor() {
-   }
+  }
 
 
   agregarStorage(juegos: Juegos){ //initial storage
