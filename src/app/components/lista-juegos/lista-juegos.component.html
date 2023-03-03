@@ -1,41 +1,40 @@
-<!-- <p>
-  la cantidad {{ listaDeJuegosAgg.length }}
-</p> -->
-<!-- <p>
-  total: ${{total}}
-</p> -->
-<!-- <p>
-  Today: {{today | date}}
-</p> -->
-<!-- <button (click)="toggleJuegoIndividual()">abrir</button> -->
 <div class="container">
-  <div class="lista-juegos--grid" >
+  <div class="lista-juegos--grid">
     <app-juegos
-    [juegos]="juegos"
-    *ngFor="let juegos of juegosArray"
-    (agregarJuego)="juegosAgregados($event)"
-    (verJuego)="onVerDetalle($event)">
-  </app-juegos>
+      [juegos]="juegos"
+      *ngFor="let juegos of juegosArray"
+      (agregarJuego)="juegosAgregados($event)"
+      (verJuego)="onVerDetalle($event)"
+    >
+    </app-juegos>
   </div>
+
   <div class="juego-individual" [class.active]="showJuegoIndividual">
     <div class="card text-center" *ngIf="juegoElegido">
-      <div class="card-header">
-        Información del juego
-      </div>
+      <div class="card-header">Información del juego</div>
       <div class="verDetalle">
-      <div class="card-body">
-        <h5 class="card-title"><span class="tituloDetalle">Titúlo:</span>{{juegoElegido.title}}</h5>
-        <img [src]="juegoElegido.thumbnail" alt="">
-        <p class="card-text"><span class="tituloDetalle">Descripción:</span>{{juegoElegido.short_description}}</p>
-        <p class="card-text"><span class="tituloDetalle">Url y genero:</span>{{juegoElegido.game_url}} - {{juegoElegido.genre}}</p>
-        <p class="card-text">{{juegoElegido.platform}}</p>
-        <p class="card-text">{{juegoElegido.developer}}</p>
-        <p class="card-text">{{juegoElegido.release_date}}</p>
-        <p class="card-text">{{juegoElegido.freetogame_profile_url}}</p>
-        <button class="btn btn-dark btn-sm" (click)="toggleJuegoIndividual()">Cerrar</button>
+        <div class="card-body">
+          <h5 class="card-title">
+            <span class="tituloDetalle">Titúlo:</span>{{ juegoElegido.title }}
+          </h5>
+          <img [src]="juegoElegido.thumbnail" alt="" />
+          <p class="card-text">
+            <span class="tituloDetalle">Descripción:</span
+            >{{ juegoElegido.short_description }}
+          </p>
+          <p class="card-text">
+            <span class="tituloDetalle">Genero: </span>{{ juegoElegido.genre }}</p>
+          <p class="card-text">
+            <span class="tituloDetalle">Hecho por: </span>{{ juegoElegido.developer }}</p>
+          <p class="card-text">
+            <span class="tituloDetalle">Fecha: </span>{{ juegoElegido.release_date }}</p>
+            <p class="card-text">
+              <span class="tituloDetalle">Url: </span>{{ juegoElegido.game_url }}</p>
+          <button class="btn btn-dark btn-sm btn-nav btn-negro" (click)="toggleJuegoIndividual()">
+            Cerrar
+          </button>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </div>
-

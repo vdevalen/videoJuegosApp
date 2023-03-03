@@ -1,11 +1,13 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Juegos} from '../../models/juegos.model';
 
+
 @Component({
   selector: 'app-juegos',
   templateUrl: './juegos.component.html',
   styleUrls: ['./juegos.component.scss']
 })
+
 export class JuegosComponent {
 
   @Input() juegos: Juegos= {
@@ -28,14 +30,25 @@ export class JuegosComponent {
   constructor() { }
 
   agregarFavoritos(){
-    this.agregarJuego.emit(this.juegos);
+    this.agregarJuego.emit(this.juegos)
   }
 
   onVerDetalle(){
     this.verJuego.emit(this.juegos.id);
   }
 
-  // getIcon(){
-  //   return this.agregarJuego ? '/assets/svg/heart-solid.svg' : '/assets/svg/heart.svg'
+  // mostrarMensaje() {
+  //   const toastTrigger = document.getElementById('liveToastBtn');
+  //   const toastLiveExample = document.getElementById('liveToast');
+
+  //   if (toastTrigger) {
+  //     toastTrigger.addEventListener('click', () => {
+  //       const toast = new Toast(toastLiveExample as HTMLElement);
+  //       toast.show();
+  //     });
+  //   }
   // }
 }
+
+
+
