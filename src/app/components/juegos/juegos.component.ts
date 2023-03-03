@@ -36,18 +36,6 @@ export class JuegosComponent {
   onVerDetalle(){
     this.verJuego.emit(this.juegos.id);
   }
-
-  // mostrarMensaje() {
-  //   const toastTrigger = document.getElementById('liveToastBtn');
-  //   const toastLiveExample = document.getElementById('liveToast');
-
-  //   if (toastTrigger) {
-  //     toastTrigger.addEventListener('click', () => {
-  //       const toast = new Toast(toastLiveExample as HTMLElement);
-  //       toast.show();
-  //     });
-  //   }
-  // }
 }
 
 

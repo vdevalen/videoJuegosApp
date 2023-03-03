@@ -5,14 +5,43 @@
 .titulo-juntos h1 {
   text-align: center;
   font-size: 8rem;
-  color: black;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 0rem;
-  font-weight: var(--font-weigth-titulos);
+  font-weight: 800;
+  font-family: "Beaufort for LOL", serif;
 }
 
 .crezcamos-juntos{
   padding: 5rem 5rem;
+}
+
+.span-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.span-mas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px 10px;
+  margin-bottom: -10px;
+  text-transform: uppercase;
+  font-family: "Beaufort for LOL", serif;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 0.85;
+}
+
+span {
+  padding: 0px 15px 10px;
+  margin-bottom: -10px;
+  text-transform: uppercase;
+  font-family: "Beaufort for LOL", serif;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 0.85;
 }
 
 .texto-juntos p {
