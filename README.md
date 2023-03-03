@@ -1,5 +1,9 @@
 # VideoJuegosApp
 
+![image](https://user-images.githubusercontent.com/72038716/222776822-8ddfffb2-3aa8-4f80-bdf3-e37791e6ffb6.png)
+![image](https://user-images.githubusercontent.com/72038716/222776947-452db5d1-4549-4372-b508-e5750214020e.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
 
 ## Development server
