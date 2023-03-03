@@ -12,15 +12,16 @@ export class StoreService {
   misFavoritos$ = this.misFavoritos.asObservable();
 
   readonly favoritos= "favoritos"
-  constructor() { }
+  constructor() {
+   }
 
 
-  agregarStorage(juegos: Juegos){
+  agregarStorage(juegos: Juegos){ //initial storage
     const incluirJuego = this.listaDeJuegosAgg.includes(juegos);
     if (!incluirJuego) {
       this.listaDeJuegosAgg.push(juegos);
         localStorage.setItem(this.favoritos, JSON.stringify(this.listaDeJuegosAgg));
-        this.misFavoritos.next(this.listaDeJuegosAgg);
+        this.misFavoritos.next(this.listaDeJuegosAgg)
     }
   }
 
@@ -51,5 +52,7 @@ export class StoreService {
       }
     }
   }
+
+
 }
 

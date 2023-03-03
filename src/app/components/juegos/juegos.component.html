@@ -1,44 +1,42 @@
 <div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{juegos.title}}</h5>
+  <div class="card-body" >
+    <h5 class="card-title">{{ juegos.title }}</h5>
     <app-img [img]="juegos.thumbnail" class="card-img-top" alt="..."></app-img>
-    <p class="card-text">{{juegos.short_description}}</p>
+    <p class="card-text">{{ juegos.short_description }}</p>
     <div class="div-botones--card">
       <div>
-        <button (click)="agregarFavoritos()" href="#" class="btn btn-dark btn-sm">Favorito <img src="/assets/svg/icon-heart.svg" alt=""></button>
+        <button
+          (click)="agregarFavoritos()"
+          href="#"
+          class="btn btn-dark btn-sm btn-card"
+        >
+          Favorito<img src="/assets/imagenes/icon-cora.png" alt="" />
+        </button>
+        <button (click)="onVerDetalle()" href="#" class="btn btn-dark btn-sm btn-card">
+          Detalle<img src="/assets/imagenes/lupa12.png" alt=""/>
+        </button> 
+
+        <!-- <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar el toast en vivo</button>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>Hace 11 minutos</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      ¡Hola Mundo! Este es un mensaje de toast.
+    </div>
+  </div>
+</div>
       </div>
       <div>
-        <button (click)="onVerDetalle()" href="#" class="btn btn-dark btn-sm" >Ver detalle <img src="/assets/svg/icon-heart.svg" alt=""></button>
+        <button (click)="onVerDetalle()" href="#" class="btn btn-dark btn-sm btn-card">
+          Detalle<img src="/assets/imagenes/lupa12.png" alt=""/>
+        </button> -->
       </div>
     </div>
   </div>
 </div>
-
-<!--
-<app-img [img]="juegos.thumbnail"></app-img>
-<h2>{{juegos.id}}</h2>
-<p>{{juegos.title}}</p>
-<p>{{juegos.game_url}}</p>
-<button (click)="onVerDetalle()">Ver detalle</button>
-<button (click)="agregarAlCarro()">Agregar</button> -->
-
-
-<!-- <section class="mt-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="card">
-          <app-img [img]="juegos.thumbnail"></app-img>
-          <div class="card-body">
-            <h2>{{juegos.id}}</h2>
-            <p class="h3">{{juegos.title}}</p>
-            <p>{{juegos.game_url}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-

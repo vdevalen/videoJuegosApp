@@ -3,13 +3,19 @@
 // }
 .div-botones--card{
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
 }
 
 .card-body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 22em;
+  height: 25em;
+}
+
+.btn-card{
+  border-radius: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
